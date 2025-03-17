@@ -20,4 +20,17 @@ class PassingCarsTest {
                 }
         );
     }
+
+    @Test
+    void b() {
+        PassingCars2 passingCars2 = new PassingCars2();
+        assertAll(() -> {
+                    assertEquals(5, passingCars2.solution(new int[]{0, 1, 0, 1, 1}));
+                    assertEquals(2, passingCars2.solution(new int[]{1, 1, 0, 1, 1}));
+                    assertEquals(0, passingCars2.solution(new int[]{1, 1, 1, 1, 0}));
+                    assertEquals(4, passingCars2.solution(new int[]{0, 1, 1, 1, 1}));
+                    assertEquals(1, passingCars2.solution(new int[]{1, 1, 1, 0, 1}));
+                }
+        );
+    }
 }
